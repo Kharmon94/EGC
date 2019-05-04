@@ -12,5 +12,15 @@
  *
  *= require_tree .
  *= require_self
+ *= stub "active_admin"
  */
 @import "materialize";
+
+body{
+	font-family: 'Old Standard TT', serif;
+	background-color: black;
+}
+
+a{
+	font-family: 'Old Standard TT', serif;
+}
