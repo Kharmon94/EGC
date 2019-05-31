@@ -25,4 +25,6 @@
 	    var options = {}
 	  });
 
+	 AOS.init();
+
  })
