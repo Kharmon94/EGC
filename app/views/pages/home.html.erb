@@ -1,15 +1,87 @@
 <div class="container">
-	<div class="row" align="center" style="margin-bottom: 65%; margin-top: 10%">
+	<div class="row" align="center" style="margin-top: 5%; margin-bottom: 25%;" data-aos="fade-up" data-aos-duration="2500">
 		<div class="col s12">
 			<div style="opacity: 0.9">
 				<%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 40%; height: auto;' %>
 				<h3 style="color: white">Exponential Growth Capital</h3>
 			</div>
-			<div>
-				    <div class="row" align="center" >
-			          <%= link_to "More Info...", pages_about_path, class: "btn waves-effect waves-light", style: "background-color: #dbc361; color: black;" %>
-			        </div>
-			</div>
 		</div>
 	</div>
+  <div class="row" >
+    <div class="col s6" style="height: 662px; margin-bottom: 4%" data-aos="fade-right" data-aos-duration="2500">
+      <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/" rel="noopener" target="_blank"><span class="blue-text">Forex</span></a> by TradingView</div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+          {
+          "showChart": true,
+          "locale": "en",
+          "width": "100%",
+          "height": "100%",
+          "largeChartUrl": "",
+          "isTransparent": false,
+          "plotLineColorGrowing": "rgba(0, 0, 0, 0.65)",
+          "plotLineColorFalling": "rgba(66, 66, 66, 1)",
+          "gridLineColor": "rgba(233, 233, 234, 1)",
+          "scaleFontColor": "rgba(0, 0, 0, 1)",
+          "belowLineFillColorGrowing": "rgba(255, 152, 0, 0.42)",
+          "belowLineFillColorFalling": "rgba(255, 152, 0, 0.43)",
+          "symbolActiveColor": "rgba(216, 216, 216, 1)",
+          "tabs": [
+            {
+              "title": "Forex",
+              "symbols": [
+                {
+                  "s": "FOREXCOM:XAUUSD"
+                },
+                {
+                  "s": "FOREXCOM:EURUSD"
+                },
+                {
+                  "s": "FX:USDCHF"
+                },
+                {
+                  "s": "FOREXCOM:XAGUSD"
+                }
+              ],
+              "originalTitle": "Forex"
+            }
+          ]
+        }
+          </script>
+        </div>
+      <!-- TradingView Widget END -->
+    </div>
+    <div class="col s6" >
+      <div class="section" data-aos="fade-left" data-aos-duration="1000">
+        <i class="medium material-icons" style="color: #dbc361">tap_and_play</i>
+        <div style="color: white">
+          <h4><strong>Forex Signals</strong></h4>
+          <h6>Too busy to be looking at charts all day? Let us do the analysis while you just wait for the alert.</h6>
+        </div>
+      </div>
+      <div class="section" data-aos="fade-left" data-aos-duration="2000">
+        <i class="medium material-icons" style="color: #dbc361">trending_up</i>
+        <div style="color: white">
+          <h4><strong>Live Trading Sessions</strong></h4>
+          <h6>Live Trading Sessions Monday-Friday from 8:30AM EST to 11:30AM EST via ZOOM video and voice chat.</h6>
+        </div>
+      </div>
+      <div class="section" data-aos="fade-left" data-aos-duration="3000">
+        <i class="medium material-icons" style="color: #dbc361">group</i>
+        <div style="color: white">
+          <h4><strong>Mentorship</strong></h4>
+          <h6>Learn everything about the foreign exchange market. Including how our team of experts and students are able to bring in thousands of dollars every week.</h6>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="row" style="margin-bottom: 25%;" data-aos="fade-up" data-aos-duration="2000">
+    <div class="col s12" align="center"><%= link_to "More Info...", pages_about_path, class: "btn waves-effect waves-light pulse", style: "background-color: #dbc361; color: black;" %></div>
+  </div>
+  <div>
+    
+  </div>
 </div>
