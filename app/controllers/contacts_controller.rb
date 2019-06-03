@@ -7,15 +7,19 @@ class ContactsController < InheritedResources::Base
 	def create
 		@contact = Contact.new(contact_params)
 
-		respond_to do |format|
-	      if @contact.save
-	        format.html { redirect_to root_path, notice: 'Thank you so much for contacting us, we will reach you as soon as possible' }
-	        format.json { render :new, status: :created, location: :new }
-	      else
-	        format.html { render :new }
-	        format.json { render json: @contact.errors, status: :unprocessable_entity }
-	      end
-	    end
+		if @contact.save
+			redirect_to root_path
+			first_name = params[:contact][:first_name]
+			last_name = params[:contact][:last_name]
+			email = params[:contact][:email]
+			description = params[:contact][:description]
+			ContactMailer.contact_email(first_name, last_name, email, description)
+			flash[:success] = "Thanks for the message, we will be in touch soon!"
+		else
+			redirect_to new_contact_path
+			flash[:danger] = "Opps, there was a problem! Please fill out all the fields"
+
+		end
 	end
 
   private

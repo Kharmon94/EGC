@@ -63,9 +63,9 @@
 
   <body>
 
-    <header style="background-color: white">
+    <header style="background-color: black">
 
-          <nav id="nav" style="margin-bottom: 5%; background-color: white">
+          <nav id="nav" style="margin-bottom: 5%; background-color: white" data-aos="fade-down" data-aos-duration="2500">
 
                 <div class="nav-wrapper">
                   <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 50px; height: auto; margin: 11%;' %></a>
@@ -96,9 +96,7 @@
     </header>
 
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-        AOS.init();
-      </script>
+
       
   
     <%= yield %>

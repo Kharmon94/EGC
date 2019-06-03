@@ -27,6 +27,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#passtore
+gem "figaro"
+
+#Emails
+gem 'sendgrid-ruby'
+
 #UserAuth
 gem 'devise'
 gem 'activeadmin'
@@ -35,6 +41,7 @@ gem 'cancancan', '~> 2.0'
 # Design
 gem 'materialize-sass'
 gem 'mini_racer'
+gem "font-awesome-rails"
 
 # Images
 gem 'mini_magick', '~> 4.8'
