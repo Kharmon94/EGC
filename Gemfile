@@ -32,6 +32,7 @@ gem "figaro"
 
 #Emails
 gem 'sendgrid-ruby'
+gem 'mail_form'
 
 #UserAuth
 gem 'devise'
