@@ -1,0 +1,53 @@
+    <header style="background-color: black">
+
+          <nav id="nav" style="margin-bottom: 5%; background-color: white" data-aos="fade-down" data-aos-duration="2500">
+
+                <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 50px; height: auto; margin: 11%;' %></a>
+                  <a href="/" data="no-turbolink" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="width: 150%; height: auto;">menu</i></a>
+                  <ul class="right hide-on-med-and-down" style="margin-top: 1.5%">
+
+                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
+
+                         
+
+                          <% if student_signed_in? %>
+                            <li><%= link_to "View Profile", students_show_path(current_student), style: "color: black; text-decoration: none" %></li>
+                            <li><%= link_to "Edit Account", edit_student_registration_path, style: "color: black; text-decoration: none;" %></li>
+                            <li><%= link_to "Sign Out", destroy_student_session_path, style: "color: black;", method: :delete %></li>
+                          <% else %>
+
+                            <li><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
+                            <li><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
+                            <li><%= link_to "Sign Up", new_student_registration_path, style: "color: black; text-decoration: none;" %></li>
+                            <li><%= link_to "Sign In", new_student_session_path, style: "color: black; text-decoration: none;" %></li>
+                          <% end %>
+
+
+
+                  </ul>
+                </div>
+          
+
+                <ul class="sidenav" id="mobile-demo">
+                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li> 
+
+
+
+                          <% if student_signed_in? %>
+
+                            <li><%= link_to "View Profile", students_show_path(current_student), style: "color: black; text-decoration: none" %></li>
+                            <li><%= link_to "Edit Account", edit_student_registration_path, style: "color: black; text-decoration: none;" %></li>
+                            <li><%= link_to "Sign Out", destroy_student_session_path, style: "color: black;", method: :delete %></li>
+                          <% else %>
+                            <li><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
+                            <li><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
+                            <li><%= link_to "Sign Up", new_student_registration_path, style: "color: black; text-decoration: none;" %></li>
+                            <li><%= link_to "Sign In", new_student_session_path, style: "color: black; text-decoration: none;" %></li>
+                          <% end %>
+                </ul>
+
+          </nav>
+
+     
+    </header>

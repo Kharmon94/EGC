@@ -1,0 +1,52 @@
+<%= form_with(model: signal_user, local: true) do |form| %>
+  <% if signal_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(signal_user.errors.count, "error") %> prohibited this signal_user from being saved:</h2>
+
+      <ul>
+      <% signal_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="color: white;" class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div style="color: white;" class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div style="color: white;" class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div style="color: white;" class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div style="color: white;" class="field">
+    <%= form.label :telegram_username %>
+    <%= form.text_field :telegram_username %>
+  </div>
+
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+  <button
+    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+    id="checkout-button-1020"
+    role="link"
+  >
+    Checkout
+  </button>
+
+  <div id="error-message"></div>
+
+
+<% end %>
